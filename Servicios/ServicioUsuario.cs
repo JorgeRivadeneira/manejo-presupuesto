@@ -22,9 +22,8 @@ namespace ManejoPresupuesto.Servicios
             {
                 var idClaim = httpContext.User
                         .Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault();
-                //TODO: fix the next line
-                //var id = int.Parse(idClaim.Value);
-                var id = 1;
+                
+                var id = int.Parse(idClaim.Value);                
                 return id;
             }
             else
